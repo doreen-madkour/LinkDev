@@ -7,6 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { NewsComponent } from './news/news.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomePageModule } from './home-page/home-page.module';
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HomePageModule } from './home-page/home-page.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CoreModule,
     HomePageModule
   ],
   providers: [],

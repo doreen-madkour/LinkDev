@@ -1,0 +1,51 @@
+@import '../../../../assets/styling/scss/variables/variables';
+
+.navbar {
+  .navbar-nav {
+    .nav-item {
+      margin: 0 1.5vw;
+
+      .nav-link {
+        font-size: $navbar-item;
+        color: $navbar-item-color;
+        font-family: $google-sans;
+      }
+
+      &.sign-up {
+        border: 1px solid $navbar-item-color;
+        border-radius: 5px;
+        padding: 0px 1rem;
+      }
+    }
+
+    &:not(.right-items) {
+      .nav-item {
+        .nav-link {
+          padding: 0;
+          &.active-link,
+          &:hover {
+            border-bottom: 1px solid $navbar-item-color;
+          }
+        }
+      }
+    }
+
+    &.right-items {
+      .nav-item {
+        margin: 0 25px;
+
+        .dropdown-toggle {
+          &::after {
+            border: solid $navbar-item-color;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+}

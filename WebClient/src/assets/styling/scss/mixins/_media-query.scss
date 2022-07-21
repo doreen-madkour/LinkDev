@@ -9,7 +9,7 @@
 
 // For maximum width for Small Devices (Mobile and tablets)
 @mixin sm-max {
-  @media only screen and (max-width: $screen-md) {
+  @media only screen and (max-width: $screen-lg) {
     @content;
   }
 }

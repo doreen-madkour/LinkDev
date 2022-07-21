@@ -1,8 +1,9 @@
 @import "../assets/styling/scss/mixins/mixins";
 @import "../assets/styling/scss/variables/variables";
 
-.container{
+.container-fluid{
+  padding: 0 9%;
     @include sm-max  {
         padding: 0;
-      }
+    }
 }

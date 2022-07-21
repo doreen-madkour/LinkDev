@@ -1,8 +1,16 @@
+@import "../../assets/styling/scss/mixins/mixins";
+@import "../../assets/styling/scss/variables/variables";
+
 .wrapper{
       &:before{
         content:url('../../assets/images/home-page/decore.svg');
         position: absolute;
         right: -10%;
         top: -55%;
+        @include sm-max {
+            content: '';
+            display: none;
+        }
       }
 }
+
