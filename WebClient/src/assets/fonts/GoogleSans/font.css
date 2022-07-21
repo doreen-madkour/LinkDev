@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'GoogleSans-Medium';
+  src: url('GoogleSans-Medium.eot');
+  src: url('GoogleSans-Medium.eot?#iefix') format('embedded-opentype'),
+       url('GoogleSans-Medium.woff2') format('woff2'),
+       url('GoogleSans-Medium.svg#GoogleSans-Medium') format('svg'),
+       url('GoogleSans-Medium.ttf') format('truetype'),
+       url('GoogleSans-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
