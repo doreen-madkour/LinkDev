@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "serve": "ng serve -o"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +21,9 @@
     "@angular/router": "~13.1.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap": "^5.1.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.1.2",
