@@ -7,9 +7,9 @@
   }
 }
 
-// For maximum width for Small Devices (Mobile Devices)
+// For maximum width for Small Devices (Mobile and tablets)
 @mixin sm-max {
-  @media only screen and (max-width: $screen-sm-max) {
+  @media only screen and (max-width: $screen-md) {
     @content;
   }
 }
@@ -28,6 +28,7 @@
   }
 }
 
+
 // From medium devices to extra large devices
 @mixin lg-max {
   @media only screen and (min-width: $screen-lg) and (max-width: $screen-xl) {
@@ -42,7 +43,7 @@
   }
 }
 
-// For Large Devices (Tablets, Small screens)
+// For Large Devices (Tablets)
 @mixin lg {
   @media only screen and (min-width: $screen-lg) {
     @content;

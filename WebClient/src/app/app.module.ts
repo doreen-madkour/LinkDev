@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NewsComponent } from './news/news.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomePageModule } from './home-page/home-page.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomePageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

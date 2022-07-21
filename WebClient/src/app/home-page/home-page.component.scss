@@ -1,0 +1,8 @@
+.wrapper{
+      &:before{
+        content:url('../../assets/images/home-page/decore.svg');
+        position: absolute;
+        right: -10%;
+        top: -55%;
+      }
+}

@@ -1,0 +1,8 @@
+@import "../assets/styling/scss/mixins/mixins";
+@import "../assets/styling/scss/variables/variables";
+
+.container{
+    @include sm-max  {
+        padding: 0;
+      }
+}
