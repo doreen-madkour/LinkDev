@@ -4,6 +4,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FullLayoutComponent } from './core/full-layout/full-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { NewsDetailsComponent } from './news-details/news-details.component';
 import { NewsComponent } from './news/news.component';
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
     { path: 'home', component: HomePageComponent },
     { path: 'about-us', component: AboutUsComponent },
     { path: 'news', component: NewsComponent },
+    { path: 'news-details/:id', component: NewsDetailsComponent },
     { path: 'contact-us', component: ContactUsComponent }
   ]}
 ];
