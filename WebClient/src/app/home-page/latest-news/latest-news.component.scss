@@ -32,6 +32,10 @@ section{
             width:125px;
             height: 41px;
             margin:0 10px;
+            &.active{
+                background-color: $active-blue;
+                color: $white;
+            }
         }
     }
  

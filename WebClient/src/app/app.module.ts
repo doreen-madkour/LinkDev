@@ -7,6 +7,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { NewsComponent } from './news/news.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomePageModule } from './home-page/home-page.module';
+import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     CoreModule,
     HomePageModule
   ],

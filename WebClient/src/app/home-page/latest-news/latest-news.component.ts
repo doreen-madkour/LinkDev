@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsCategory } from '../models/news-category';
+import { NewsService } from '../services/news.service';
 
 @Component({
   selector: 'app-latest-news',
@@ -7,16 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestNewsComponent implements OnInit {
   selectedDevice = 'Health';
-  categories = [
-    { id: 1, name: "Top News" },
-    { id: 3, name: "Technology" },
-    { id: 4, name: "Sport" },
-    { id: 5, name: "Health" },
-    { id: 5, name: "Economics" }
-  ];
-  constructor() { }
+  categories: NewsCategory[] = [];
+  viewMode!:number;
+  constructor(private _newsService: NewsService) { }
 
   ngOnInit(): void {
+    this.getCategories();
+  }
+
+  getCategories(){
+    this._newsService.getNewsCategories().subscribe({
+      next: res=>{
+        console.log(res.newsCategory)
+        this.categories = res.newsCategory;
+      }
+    })
   }
 
   onCategorySelected(event: any) {
@@ -26,4 +33,9 @@ export class LatestNewsComponent implements OnInit {
   filterByCategory(categoryId: any){
 
   }
+
+  selectColor(index: any) {
+    this.viewMode = index;
+}
+
 }

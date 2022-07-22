@@ -1,17 +1,18 @@
 <section class="text-center">
-    <h6 class="sub-header">Media</h6>
-    <h1 class="header">Top News</h1>
-    <div class="categories mt-3 mb-3">
-        <button (click)="filterByCategory(1)">Top News</button>
-        <button (click)="filterByCategory(2)">Technology</button>
-        <button (click)="filterByCategory(3)">Sport</button>
-        <button (click)="filterByCategory(4)">Health</button>
-        <button (click)="filterByCategory(5)">Economics</button>
-    </div>
+  <h6 class="sub-header">Media</h6>
+  <h1 class="header">Top News</h1>
+  <div class="categories mt-3 mb-3">
+    <button *ngFor="let category of categories; let index=index"
+      (click)="selectColor(index);filterByCategory(category.id)" [class.active]="viewMode == index">
+      {{category.name}}
+    </button>
+  </div> 
 
-      <select  (change)="onCategorySelected($event)">
-        <option [value]="category.id" *ngFor="let category of categories">{{category.name}}</option>
-    </select>
+
+
+  <select (change)="onCategorySelected($event)">
+    <option [value]="category.id" *ngFor="let category of categories">{{category.name}}</option>
+  </select>
 
 
 
