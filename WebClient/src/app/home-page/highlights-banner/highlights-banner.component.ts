@@ -18,7 +18,8 @@ export class HighlightsBannerComponent implements OnInit {
     "slidesToScroll": 1 , 
     autoplay: false ,
      mobileFirst:true ,
-     dots: true
+     dots: true,
+     arrows: false
     };
     
   constructor(private _highlightsService: HighlightsService, private _sanitizer: DomSanitizer ) { }
