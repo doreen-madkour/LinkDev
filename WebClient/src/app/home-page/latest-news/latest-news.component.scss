@@ -2,12 +2,12 @@
 @import "../../../assets/styling/scss//mixins/mixins";
 
 section {
-  position: relative;
-  &::before{
-    content:url(../../../assets/images/home-page/news-bg.svg);
-    position: absolute;
-    top: 30px;
-    right: 0;
+  background-image: url(../../../assets/images/home-page/news-bg.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  @include sm-max{
+    background-position: top right;
+    background-size: 50%;
   }
   .sub-header {
     font-family: $poppins;
