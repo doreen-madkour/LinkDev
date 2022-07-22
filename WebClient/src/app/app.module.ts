@@ -9,13 +9,15 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomePageModule } from './home-page/home-page.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
+import { NewsDetailsComponent } from './news-details/news-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutUsComponent,
     NewsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    NewsDetailsComponent
   ],
   imports: [
     BrowserModule,
