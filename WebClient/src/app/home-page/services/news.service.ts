@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { NewsCategoriesResponse } from '../models/news-category-response';
+import { NewsItem } from '../models/news-item';
 import { NewsListingResponse } from '../models/news-listing-reponse';
 
 @Injectable({
@@ -21,5 +22,9 @@ export class NewsService {
 
   getAllNews(): Observable<NewsListingResponse> {
     return this._httpClient.get<NewsListingResponse>(`${this.baseUrl}/d275425a434e02acf2f7`)
+  }
+
+  getNewsById(newsId:number): Observable<NewsItem> {
+    return this._httpClient.get<NewsItem>(`${this.baseUrl}/d275425a434e02acf2f7/News/${newsId}`)
   }
 }

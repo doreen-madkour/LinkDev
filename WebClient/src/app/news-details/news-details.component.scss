@@ -1,0 +1,43 @@
+@import "../../assets/styling/scss/variables/variables";
+@import "../../assets/styling/scss//mixins/mixins";
+
+section{
+    padding-top: 50px;
+    h3{
+        color:$dark-blue;
+        font-family: $poppins;
+    }
+    img{
+        height: 400px;
+        margin: 30px auto;
+    }
+    p{
+        text-align: justify;
+        font-family: $open-Sans;
+    }
+    .published-date, .share-lbl{
+        text-transform: capitalize;
+        font-size: 16px;
+        color: $navy-blue;
+    }
+    .share-links{
+        i{
+            border-radius: 50%;
+            color: $white;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin-right: 10px;
+            &.fa-twitter{
+                background-color: $twitter-color;
+            }
+            &.fa-facebook-f{
+                background-color: $facebook-color;
+            }
+            &.fa-envelope{
+                background-color: $email-color;
+            }
+        }
+    }
+}
