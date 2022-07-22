@@ -56,11 +56,18 @@ export class LatestNewsComponent implements OnInit {
   }
 
   addToFavourites(item: NewsItem) {
+    this.closeSocialActions();
     item.isAddedToFavourite = !item.isAddedToFavourite;
   }
 
   showSocialActions(socialActions:HTMLElement){
+    this.closeSocialActions();
     socialActions.classList.toggle('visibility');
+  }
+
+  closeSocialActions(){
+    let visibilityElement = document.querySelectorAll('.visibility');
+    visibilityElement.forEach(element=> element.classList.remove('visibility'));
   }
 
 }
