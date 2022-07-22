@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { NewsCategoriesResponse } from '../models/news-category-response';
+import { NewsListingResponse } from '../models/news-listing-reponse';
 
 @Injectable({
   providedIn: 'root'
@@ -13,13 +14,12 @@ export class NewsService {
   
   constructor(private _httpClient: HttpClient) { }
 
-  // saveLettersManagement(body: LettersManagement): Observable<boolean> {
-  //   return this._httpClient.post(`${this.baseUrl}/SaveLettersManagement`, body, { headers: new HttpHeaders({ 'content-type': 'application/json' }) }).pipe(
-  //     map((res) => <boolean>res)
-  //   );
-  // }
 
   getNewsCategories(): Observable<NewsCategoriesResponse> {
     return this._httpClient.get<NewsCategoriesResponse>(`${this.baseUrl}/91298d970c27e9a06518`)
+  }
+
+  getAllNews(): Observable<NewsListingResponse> {
+    return this._httpClient.get<NewsListingResponse>(`${this.baseUrl}/d275425a434e02acf2f7`)
   }
 }

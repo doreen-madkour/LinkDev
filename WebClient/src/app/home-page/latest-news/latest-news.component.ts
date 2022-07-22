@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsCategory } from '../models/news-category';
+import { NewsItem } from '../models/news-item';
 import { NewsService } from '../services/news.service';
 
 @Component({
@@ -8,34 +9,58 @@ import { NewsService } from '../services/news.service';
   styleUrls: ['./latest-news.component.scss']
 })
 export class LatestNewsComponent implements OnInit {
-  selectedDevice = 'Health';
   categories: NewsCategory[] = [];
-  viewMode!:number;
+  news: NewsItem[] = [];
+  newsCopy: NewsItem[] = [];
+  selectedCategory!: number;
   constructor(private _newsService: NewsService) { }
 
   ngOnInit(): void {
     this.getCategories();
+    this.getAllNews();
   }
 
-  getCategories(){
+  getCategories() {
     this._newsService.getNewsCategories().subscribe({
-      next: res=>{
-        console.log(res.newsCategory)
+      next: res => {
         this.categories = res.newsCategory;
       }
     })
   }
 
+  getAllNews() {
+    this._newsService.getAllNews().subscribe({
+      next: res => {
+        this.news = res.News;
+        this.news = this.news.filter(item => item.showOnHomepage === 'yes');
+        this.newsCopy = [...this.news];
+      }
+    })
+  }
+
+
   onCategorySelected(event: any) {
-    console.log(event.target.value);
+    this.filterByCategory(event.target.value);
   }
 
-  filterByCategory(categoryId: any){
-
+  filterByCategory(categoryId: any) {
+    this.news = this.newsCopy.filter(item=> item.categoryID == categoryId);
   }
 
-  selectColor(index: any) {
-    this.viewMode = index;
-}
+  categorySelected(index: number) {
+    this.selectedCategory = index;
+  }
+
+  getCategoryName(categoryId:number):string | undefined{
+    return this.categories.find(category => category.id == categoryId)?.name;
+  }
+
+  addToFavourites(item: NewsItem) {
+    item.isAddedToFavourite = !item.isAddedToFavourite;
+  }
+
+  showSocialActions(socialActions:HTMLElement){
+    socialActions.classList.toggle('visibility');
+  }
 
 }
