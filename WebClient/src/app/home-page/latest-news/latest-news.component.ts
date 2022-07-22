@@ -61,8 +61,12 @@ export class LatestNewsComponent implements OnInit {
   }
 
   showSocialActions(socialActions:HTMLElement){
+    let isVisible = socialActions.classList.contains('visibility');
     this.closeSocialActions();
-    socialActions.classList.toggle('visibility');
+    if(isVisible)
+      socialActions.classList.remove('visibility');
+    else
+      socialActions.classList.add('visibility');
   }
 
   closeSocialActions(){
