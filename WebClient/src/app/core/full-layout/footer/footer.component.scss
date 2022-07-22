@@ -1,0 +1,69 @@
+@import "../../../../assets/styling/scss/variables/variables";
+
+footer{
+    img.logo{
+        width: 157px;
+        height: 60px;
+    }
+    .slogan{
+        font-family: $poppins;
+        color:$navy-blue;
+        max-width: 207px;
+        font-size: 13px;
+    }
+    h3{
+        font-family: $poppins;
+        font-size: 21px;
+        color:$footer-header-color;
+        font-weight: bold;
+    }
+    ul{
+        list-style: none;
+        padding-left: 0;
+        li{
+            padding: 5px 0;
+            a{
+                font-family: $poppins;
+                font-size: 18px;
+                color:$footer-blue;
+                text-decoration: none;
+                font-weight: 500;
+            }
+        }
+    }
+    h4{
+        font-family: $poppins;
+        font-size: 20px;
+        color:$navy-blue;
+    }
+    .social-links{
+        i{
+            border-radius: 50px;
+            color:$footer-header-color;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 7px 29px 0px;
+            width:45px;
+            height:45px;
+            text-align: center;
+            line-height: 45px;
+            margin-right: 10px;
+        }
+    }
+    .app-store, .google-play{
+        color:$white;
+        background-color: $footer-header-color;
+        font-family: $poppins;
+        text-decoration: none;
+        font-size: 8px;
+        font-weight: normal;
+        border-radius: 18px;
+        align-items: center;
+        padding: 5px 10px;
+        width: 107px;
+    }
+    .copy-rights{
+        font-family: $poppins;
+        color:$navy-blue;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
