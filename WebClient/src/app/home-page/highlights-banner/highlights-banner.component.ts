@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HighlightItem } from '../models/highlight-item';
 import { HighlightsService } from '../services/highlights.service';
@@ -11,10 +11,16 @@ import { HighlightsService } from '../services/highlights.service';
 export class HighlightsBannerComponent implements OnInit {
 
   slides : HighlightItem[] = [];
-  slideConfig = {"slidesToShow": 1, "slidesToScroll": 1 , autoplay: false , mobileFirst:true ,dots: true};
   videoUrl!:any;
-  
-
+  @Output() onSlideChange : EventEmitter<any> = new EventEmitter();
+  slideConfig = {
+    "slidesToShow": 1, 
+    "slidesToScroll": 1 , 
+    autoplay: false ,
+     mobileFirst:true ,
+     dots: true
+    };
+    
   constructor(private _highlightsService: HighlightsService, private _sanitizer: DomSanitizer ) { }
 
   ngOnInit(): void {
@@ -41,6 +47,11 @@ export class HighlightsBannerComponent implements OnInit {
   
   slickInit(e: any) {
     this.setSliderDotsColors();
+  }
+
+  afterChange(e: any) {
+    console.log('afterChange');
+    this.onSlideChange.emit({currentSlide: e.slick.currentSlide})
   }
 
   setSliderDotsColors() {
