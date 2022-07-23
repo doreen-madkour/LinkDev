@@ -42,7 +42,7 @@ export class HighlightsBannerComponent implements OnInit {
     this.slides.forEach((slide, index)=>{
       index++;
       slide.imgUrl = './../../assets/images/home-page/highlights-slider/slide'+index+'.png';
-      slide.videoUrl = "https://www.youtube.com/embed/tgbNymZ7vqY";
+      slide.videoUrl = "https://www.youtube.com/embed/dzfL1jwX200";
     })
   }
   
