@@ -8,7 +8,6 @@ import { ThingsWeDoResponse } from '../models/things-we-do-response';
 })
 export class ThingsWeDoComponent implements OnInit {
   thingsWeDo = new ThingsWeDoResponse();
-  services!:any[];
   servicesImgBaseUrl: string = "../../../assets/images/home-page/services/";
 
   constructor() { }
