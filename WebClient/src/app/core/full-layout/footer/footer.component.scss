@@ -1,4 +1,5 @@
 @import "../../../../assets/styling/scss/variables/variables";
+@import "../../../../assets/styling/scss/mixins/mixins";
 
 footer{
     img.logo{
@@ -36,6 +37,12 @@ footer{
         font-size: 20px;
         color:$navy-blue;
     }
+    .footer-social{
+        @include sm-max{
+            align-items: flex-start !important;
+        }
+    }
+
     .social-links{
         i{
             border-radius: 50px;

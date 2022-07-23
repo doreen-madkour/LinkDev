@@ -11,3 +11,23 @@
     $endColor $endColorPercentage
   );
 }
+
+@mixin blurBorderBackground( $bgColor , $opactiy , $border-raduis , $blur){
+  background-color: $bgColor;
+  opacity : $opactiy;
+  border-radius: $border-raduis;
+  filter: blur($blur);
+  backdrop-filter: blur($blur);
+}
+
+@mixin backgroundImage($img-url, $top , $bottom , $right, $left , $width , $height , $z-index){
+  background-image: url($img-url);
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  right: $right;
+  left:$left;
+  width: $width;
+  height:$height;
+  z-index: $z-index;
+}
