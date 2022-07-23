@@ -41,7 +41,7 @@ export class HighlightsBannerComponent implements OnInit {
   addSlidesImages(){
     this.slides.forEach((slide, index)=>{
       index++;
-      slide.imgUrl = './../../assets/images/home-page/highlights-slider/slide'+index+'.png';
+      slide.imgUrl = './../../assets/images/home-page/highlights-slider/slide'+index+'.svg';
       slide.videoUrl = "https://www.youtube.com/embed/dzfL1jwX200";
     })
   }

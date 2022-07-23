@@ -64,12 +64,28 @@
   }
 }
 
-// Extra Extra Large Devices (Desktops)
-@mixin xxl {
+// Extra Extra Large Devices Min
+@mixin xxl-min {
   @media only screen and (min-width: $screen-xxl) {
     @content;
   }
 }
+
+// Extra Extra Large Devices Max
+@mixin xxl-mx {
+  @media only screen and (max-width: $screen-xxl) {
+    @content;
+  }
+}
+
+
+@mixin l-mx {
+  @media only screen and (min-width: $screen-large) {
+    @content;
+  }
+}
+
+
 
 // To use this function, use @include to call it
 // Example @include lg{background-color: blue;}

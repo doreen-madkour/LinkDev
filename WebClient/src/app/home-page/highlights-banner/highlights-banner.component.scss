@@ -3,11 +3,15 @@
 
 section ::ng-deep {
   min-height: 600px;
+  padding-bottom: 0;
+
   .slide {
     position: relative;
 
     .container-row {
-      padding-bottom: 100px;
+      @include l-mx {
+        width: 80%;
+      }
     }
 
     .left-col {
@@ -23,23 +27,29 @@ section ::ng-deep {
         position: relative;
         display: inline-block;
         margin: 50px 0 30px;
-        height: 190px;
-        @include sm-max{
+
+        @include sm-max {
           height: auto;
           margin: 20px 0;
         }
 
         h1 {
           font-family: $volkhov;
-          font-size: 4.5vw;
+          font-size: 60px;
           color: $slider-header-color;
           font-weight: bold;
           z-index: 1;
           position: relative;
           max-width: 760px;
-          @include sm-max{
+
+          @include xxl-mx {
+            font-size: 49px;
+          }
+
+          @include sm-max {
             font-size: 35px;
           }
+
         }
 
         svg {
@@ -59,16 +69,18 @@ section ::ng-deep {
         line-height: 30px;
       }
 
-      .slider-img-sm{
+      .slider-img-sm {
         display: none;
         width: 70%;
         margin: 0 auto 30px;
-        @include sm-max{
+
+        @include sm-max {
           display: block;
         }
       }
+
       .actions {
-        padding-bottom: 2%;
+        padding-bottom: 100px;
 
         .find-out-cta {
           color: $white;
@@ -87,9 +99,10 @@ section ::ng-deep {
         .play-demo {
           display: flex;
           margin-left: auto;
-          margin-right: 10%;
+          margin-right: 20%;
           align-items: center;
-          @include sm-max{
+
+          @include sm-max {
             margin-right: 0;
           }
 
@@ -124,84 +137,108 @@ section ::ng-deep {
       img {
         position: absolute;
         top: 0;
-        right: 0;
-        height: 100%;
-        @include sm-max{
+        right: 12%;
+        height: 105%;
+
+        @include sm-max {
           display: none;
         }
       }
     }
   }
 
-  .slick-list {
-    height: 100%;
-  }
 
-  .slick-dots {
-    text-align: left;
-    bottom: 30px;
-    margin-right: 10%;
-    width: 50%;
-    @include sm-max{
-      width: 100%;
-      text-align: center;
-    }
-    li:not(:last-of-type) {
-      width: 33%;
-      height: auto;
-      margin: 0;
+  //slider
 
-      button {
-        width: 40px;
-        height: 40px;
-        border-radius: 50px;
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
 
-        &:before {
-          content: ''
-        }
+    .slick-list {
+      height: 100%;
 
-        &:after {
-          content: '';
-          background-image: url('../../../assets/images/home-page/highlights-slider/dot.svg');
-          width: 75%;
-          margin-left: 15%;
-          height: 10px;
-          position: absolute;
-          background-repeat: repeat-x;
+      .slick-track {
+        display: flex !important;
+
+        .slick-slide {
+          margin-left: 5px;
+          height: inherit !important;
         }
       }
     }
 
-    li {
-      button {
-        width: 40px;
-        height: 40px;
-        background-color: black;
-        border-radius: 50px;
+    .slick-dots {
+      text-align: left;
+      bottom: 30px;
+      margin-right: 10%;
+      width: 35%;
 
-        &:before {
-          content: ''
-        }
+      @include sm-max {
+        width: 100%;
+        text-align: center;
       }
 
-      &.slick-active {
+      li:not(:last-of-type) {
+        width: 33%;
+        height: auto;
+        margin: 0;
+
         button {
-          width: 50px;
-          height: 50px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50px;
+
+          &:before {
+            content: ''
+          }
+
+          &:after {
+            content: '';
+            background-image: url('../../../assets/images/home-page/highlights-slider/dot.svg');
+            width: 70%;
+            margin-left: 19%;
+            height: 10px;
+            position: absolute;
+            background-repeat: repeat-x;
+          }
+        }
+      }
+
+      li {
+        button {
+          width: 40px;
+          height: 40px;
+          background-color: black;
+          border-radius: 50px;
+
+          &:before {
+            content: ''
+          }
+        }
+
+        &.slick-active {
+          button {
+            width: 50px;
+            height: 50px;
+          }
         }
       }
     }
   }
 
+
+
+  //modal
   .modal {
     .modal-dialog {
       width: 50%;
       max-width: 100vw;
       height: 50%;
-      @include sm-max{
+
+      @include sm-max {
         width: calc(100vw - 40px);
-        margin:auto;
+        margin: auto;
       }
+
       .modal-header {
         border: none;
         padding-bottom: 0;
