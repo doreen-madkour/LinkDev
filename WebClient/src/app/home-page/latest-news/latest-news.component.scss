@@ -2,9 +2,6 @@
 @import "../../../assets/styling/scss//mixins/mixins";
 
 section {
-  // background-image: url(../../../assets/images/home-page/news-bg.svg);
-  // background-repeat: no-repeat;
-  // background-position: top right;
   position: relative;
 
   @include sm-max {

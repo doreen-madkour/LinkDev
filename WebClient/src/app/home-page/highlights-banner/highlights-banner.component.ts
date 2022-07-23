@@ -51,7 +51,6 @@ export class HighlightsBannerComponent implements OnInit {
   }
 
   afterChange(e: any) {
-    console.log('afterChange');
     this.onSlideChange.emit({currentSlide: e.slick.currentSlide})
   }
 
