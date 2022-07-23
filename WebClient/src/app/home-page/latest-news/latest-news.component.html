@@ -27,7 +27,7 @@
           </svg>
           <p class="m-0">{{item.publishedDate}}</p>
         </div>
-        <div class="d-flex justify-content-between mt-3">
+        <div class="d-flex justify-content-between align-items-center mt-3">
           <p class="category"><a href="">{{getCategoryName(item.categoryID)}}</a></p>
           <div class="actions d-flex">
             <svg *ngIf="!item.isAddedToFavourite; else addToFavourite" (click)="addToFavourites(item)" id="ic_favorite_border_24px" xmlns="http://www.w3.org/2000/svg"  width="18" height="30" viewBox="0 0 18 30">

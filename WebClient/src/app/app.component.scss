@@ -2,7 +2,7 @@
 @import "../assets/styling/scss/variables/variables";
 
 .container-fluid{
-  padding: 0 9%;
+  padding: 0 140px;
     @include sm-max  {
         padding: 0;
     }

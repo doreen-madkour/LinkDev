@@ -22,7 +22,7 @@ section {
   }
 
   .header {
-    font-family: $volkhov;
+    font-family: $poppins;
     font-size: 50px;
     font-weight: bold;
     color: $header-color;
@@ -77,7 +77,7 @@ section {
 
       img.card-img-top {
         object-fit: cover;
-        height: 300px;
+        height: 330px;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
       }
@@ -99,6 +99,7 @@ section {
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           text-decoration: none;
+          font-weight: bold;
         }
 
         .category {
