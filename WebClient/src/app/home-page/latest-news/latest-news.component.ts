@@ -34,9 +34,14 @@ export class LatestNewsComponent implements OnInit {
       next: res => {
         this.news = res.News;
         this.news = this.news.filter(item => item.showOnHomepage === 'yes');
+        this.convertToDateFormat();
         this.newsCopy = [...this.news];
       }
     })
+  }
+
+  convertToDateFormat(){
+   return this.news.forEach(item=> item.publishedDate? item.publishedDate = new Date(item.publishedDate) : ''); 
   }
 
 

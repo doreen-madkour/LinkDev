@@ -5,7 +5,7 @@ export class NewsItem{
     public categoryID!:number;
     public urlToImage!:string;
     public description!:string;
-    public publishedDate!:string;
+    public publishedDate!:Date;
     public showOnHomepage!:string;  
     public isAddedToFavourite!:boolean;
 }
