@@ -86,6 +86,14 @@
 }
 
 
+@mixin med-screens {
+  @media only screen and (min-width: $screen-size-1) and (max-width: $screen-size-2){
+    @content;
+  }
+}
+
+
+
 
 // To use this function, use @include to call it
 // Example @include lg{background-color: blue;}
