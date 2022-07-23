@@ -11,7 +11,7 @@
             <div class="square">
               <img class="" [src]="service.imgUrl">
               <div class="overlay fade-effect">
-                <a href="" target="_blank"> <i class="fa-solid fa-arrow-right-long"></i> Read more</a>
+                <a [href]="service.readMoreUrl"> <i class="fa-solid fa-arrow-right-long"></i> Read more</a>
             </div>
               <p>{{service.name}}</p>
               <span>{{service.name}}</span>
@@ -24,7 +24,7 @@
                 <div class="square" *ngIf="service.order === 2">
                     <img class="" [src]="service.imgUrl">
                     <div class="overlay fade-effect">
-                        <a href="" target="_blank"> <i class="fa-solid fa-arrow-right-long"></i> Read more</a>
+                        <a [href]="service.readMoreUrl"> <i class="fa-solid fa-arrow-right-long"></i> Read more</a>
                     </div>
                     <p>{{service.name}}</p>
                     <span>{{service.name}}</span>
@@ -37,7 +37,7 @@
                 <div class="square" *ngIf="service.order === 3">
                     <img class="" [src]="service.imgUrl">
                     <div class="overlay fade-effect">
-                      <a href="" target="_blank"> <i class="fa-solid fa-arrow-right-long"></i> Read more</a>
+                      <a [href]="service.readMoreUrl"> <i class="fa-solid fa-arrow-right-long"></i> Read more</a>
                   </div>
                     <p>{{service.name}}</p>
                     <span>{{service.name}}</span>

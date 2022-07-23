@@ -21,11 +21,11 @@ export class ThingsWeDoComponent implements OnInit {
     this.thingsWeDo.brief = `We craft technology solutions that digitally bond and transform the productivity of our customers and their
     citizens, workers, consumers and partners.`;
     this.thingsWeDo.services = [
-      { name: 'transformation' , order: 1, imgUrl: `${this.servicesImgBaseUrl + 'transformation.svg'}`},
-      { name: 'envision' ,  order: 2, imgUrl:  `${this.servicesImgBaseUrl + 'enovision.svg'}`},
-      { name: 'dynamics 365' ,  order: 2, imgUrl:  `${this.servicesImgBaseUrl + 'dynamics.svg'}`},
-      { name: 'crafty mind' ,  order: 3, imgUrl:  `${this.servicesImgBaseUrl + 'crafty.svg'}`},
-      { name: 'services' ,  order: 3, imgUrl:  `${this.servicesImgBaseUrl + 'services.svg'}`}
+      { name: 'transformation' , order: 1, imgUrl: `${this.servicesImgBaseUrl + 'transformation.svg'}` , readMoreUrl:'http://www.google.com'},
+      { name: 'envision' ,  order: 2, imgUrl:  `${this.servicesImgBaseUrl + 'enovision.svg'}` , readMoreUrl:'http://www.google.com'},
+      { name: 'dynamics 365' ,  order: 2, imgUrl:  `${this.servicesImgBaseUrl + 'dynamics.svg'}` , readMoreUrl:'http://www.google.com'},
+      { name: 'crafty mind' ,  order: 3, imgUrl:  `${this.servicesImgBaseUrl + 'crafty.svg'}` , readMoreUrl:'http://www.google.com'},
+      { name: 'services' ,  order: 3, imgUrl:  `${this.servicesImgBaseUrl + 'services.svg'}` , readMoreUrl:'http://www.google.com'}
     ]
   }
 
