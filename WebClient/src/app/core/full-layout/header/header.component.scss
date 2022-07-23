@@ -1,74 +1,78 @@
 @import '../../../../assets/styling/scss/variables/variables';
 @import '../../../../assets/styling/scss/mixins/mixins';
 
-.navbar {
-  @include sm-max {
-    background: $white;
-    z-index: 2;
-    margin: 0 -20px;
-    padding: 10px 20px;
-  }
-
-  .navbar-nav {
-    @include sm-max {
-      padding-top: 30px;
-    }
-    .nav-item {
-      margin: 0 1.5vw;
+header{
+  z-index: 1;
+    position: relative;
+    .navbar {
       @include sm-max {
-        line-height: 40px;
-        width: fit-content;
+        background: $white;
+        z-index: 2;
+        margin: 0 -20px;
+        padding: 10px 20px;
       }
-      .nav-link {
-        font-size: $navbar-item;
-        color: $navbar-item-color;
-        font-family: $google-sans;
-      }
-
-      &.sign-up {
-        border: 1px solid $navbar-item-color;
-        border-radius: 5px;
-        padding: 0px 1rem;
+    
+      .navbar-nav {
         @include sm-max {
-          line-height: normal;
+          padding-top: 30px;
         }
-      }
-    }
-
-    &:not(.right-items) {
-      .nav-item {
-        .nav-link {
-          padding: 0;
-
-          &.active-link,
-          &:hover {
-            border-bottom: 1px solid $navbar-item-color;
+        .nav-item {
+          margin: 0 1.5vw;
+          @include sm-max {
+            line-height: 40px;
+            width: fit-content;
+          }
+          .nav-link {
+            font-size: $navbar-item;
+            color: $navbar-item-color;
+            font-family: $google-sans;
+          }
+    
+          &.sign-up {
+            border: 1px solid $navbar-item-color;
+            border-radius: 5px;
+            padding: 0px 1rem;
+            @include sm-max {
+              line-height: normal;
+            }
+          }
+        }
+    
+        &:not(.right-items) {
+          .nav-item {
+            .nav-link {
+              padding: 0;
+    
+              &.active-link,
+              &:hover {
+                border-bottom: 1px solid $navbar-item-color;
+              }
+            }
+          }
+        }
+    
+        &.right-items {
+          @include sm-max {
+            margin: unset !important;
+          }
+          .nav-item {
+            margin: 0 25px;
+            @include sm-max {
+              margin: 0 10px;
+            }
+            .dropdown-toggle {
+              &::after {
+                border: solid $navbar-item-color;
+                border-width: 0 1px 1px 0;
+                display: inline-block;
+                padding: 3px;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+              }
+            }
           }
         }
       }
+    
     }
-
-    &.right-items {
-      @include sm-max {
-        margin: unset !important;
-      }
-      .nav-item {
-        margin: 0 25px;
-        @include sm-max {
-          margin: 0 10px;
-        }
-        .dropdown-toggle {
-          &::after {
-            border: solid $navbar-item-color;
-            border-width: 0 1px 1px 0;
-            display: inline-block;
-            padding: 3px;
-            transform: rotate(45deg);
-            -webkit-transform: rotate(45deg);
-          }
-        }
-      }
-    }
-  }
-
 }
