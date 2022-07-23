@@ -2,12 +2,16 @@
   <h6 class="sub-header mb-3">Media</h6>
   <h1 class="header mb-4">Top News</h1>
   <div class="categories">
+    <button  (click)="clearFilter()" [class.active]="isFilteredCleared">
+    All news
+  </button>
     <button *ngFor="let category of categories; let index=index"
-      (click)="categorySelected(index);filterByCategory(category.id)" [class.active]="selectedCategory == index">
+      (click)="categorySelected(index);filterByCategory(category.id)" [class.active]="selectedCategory == index && !isFilteredCleared">
       {{category.name}}
     </button>
   </div> 
   <select (change)="onCategorySelected($event)">
+    <option [value]="undefined">All news</option>
     <option [value]="category.id" *ngFor="let category of categories">{{category.name}}</option>
   </select>
 
@@ -44,6 +48,12 @@
         </div>
         </div>
       </div>
+    </div>
+   
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-lg-4">
+      <a [routerLink]="['/news']" class="link-btn"> View All News </a>
     </div>
   </div>
 </section>

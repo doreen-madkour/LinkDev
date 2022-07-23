@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { NewsCategory } from '../models/news-category';
 import { NewsItem } from '../models/news-item';
 import { NewsService } from '../services/news.service';
@@ -13,6 +13,7 @@ export class LatestNewsComponent implements OnInit {
   news: NewsItem[] = [];
   newsCopy: NewsItem[] = [];
   selectedCategory!: number;
+  isFilteredCleared: boolean = true;
   constructor(private _newsService: NewsService) { }
 
   ngOnInit(): void {
@@ -40,14 +41,23 @@ export class LatestNewsComponent implements OnInit {
 
 
   onCategorySelected(event: any) {
-    this.filterByCategory(event.target.value);
+    if(event.target.value != 'undefined')
+      this.filterByCategory(event.target.value);
+    else
+      this.clearFilter();
   }
 
   filterByCategory(categoryId: any) {
     this.news = this.newsCopy.filter(item=> item.categoryID == categoryId);
   }
 
+  clearFilter(){
+    this.isFilteredCleared = true;
+    this.news = this.newsCopy;
+  }
+
   categorySelected(index: number) {
+    this.isFilteredCleared = false;
     this.selectedCategory = index;
   }
 

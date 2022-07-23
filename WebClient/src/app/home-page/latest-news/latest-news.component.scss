@@ -195,4 +195,24 @@ section {
       }
     }
   }
+
+  .link-btn{
+    background-color: $orange;
+    color: $white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: $google-sans;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    width: 60%;
+    height: 60px;
+    line-height: 60px;
+    max-width: 400px;
+    display: inline-block;
+    @include sm-max{
+      width: 100%;
+    }
+  }
+
 }
