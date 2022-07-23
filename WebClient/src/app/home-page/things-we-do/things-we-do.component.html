@@ -1,3 +1,54 @@
 <section>
-    
+  <div class="text-bg">
+    Things We Do
+  </div>
+  <div class="row row-container">
+    <div class="col-lg-6 left-col">
+      <div class="services row">
+
+        <ng-container *ngFor="let service of services">
+          <div class="col-lg-4" *ngIf="service.order === 1">
+            <div class="square">
+              <img class="" [src]="service.imgUrl">
+              <div class="overlay fade-effect"></div>
+              <p>{{service.name}}</p>
+              <span>{{service.name}}</span>
+            </div>
+          </div>
+        </ng-container>
+
+        <div class="col-lg-4">
+            <ng-container *ngFor="let service of services">
+                <div class="square" *ngIf="service.order === 2">
+                    <img class="" [src]="service.imgUrl">
+                    <div class="overlay fade-effect">
+                        <a href="" target="_blank"> <i class="fa-solid fa-arrow-right-long"></i> Read more</a>
+                    </div>
+                    <p>{{service.name}}</p>
+                    <span>{{service.name}}</span>
+                  </div>
+            </ng-container>
+        </div>
+
+        <div class="col-lg-4">
+            <ng-container *ngFor="let service of services">
+                <div class="square" *ngIf="service.order === 3">
+                    <img class="" [src]="service.imgUrl">
+                    <div class="overlay fade-effect"></div>
+                    <p>{{service.name}}</p>
+                    <span>{{service.name}}</span>
+                  </div>
+            </ng-container>
+        </div>
+      
+      </div>
+    </div>
+    <div class="col-lg-6 right-col">
+      <div>
+        <h1> We Deliver Digital Productivity</h1>
+        <p> We craft technology solutions that digitally bond and transform the productivity of our customers and their
+          citizens, workers, consumers and partners. </p>
+      </div>
+    </div>
+  </div>
 </section>
